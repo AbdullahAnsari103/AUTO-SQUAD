@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+.outer {
+    border: 2px solid #2c2c2c;
+    width: 450px;
+    min-height: 1400px; /* Changed to min-height for content flexibility */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    border-radius: 30px;
+    background: linear-gradient(145deg, #3d3d3d, #2a2a2a);
+    transition: transform 0.8s ease, background-color 0.8s ease;
+    display: inline-block;
+    margin: 20px;
+    position: relative; /* For better child element control */
+}
+
+.head {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    margin: 20px 0;
+    padding: 0 15px; /* Added padding for text wrapping */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    padding: 0 20px;
+}
+
+.img-container { /* New wrapper for image */
+    width: 100%;
+    padding: 0 20px;
+    margin: 20px 0;
+}
+
+.img {
+    width: 100%;
+    height: 400px; /* Fixed height for desktop */
+    border-radius: 20px;
+    object-fit: cover;
+    border: 2px solid #ffcc00;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff4500, #ffcc00);
+    color: #121212;
+    cursor: pointer;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    box-shadow: 0 4px 8px rgba(255, 204, 0, 0.5);
+    margin: 30px auto; /* Centered button */
+    display: block;
+    width: 80%;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #585858, #ff4500);
+    color: #1e1e1e;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 140, 0, 0.7);
+}
+
+.outer:hover {
+    box-shadow: 0 10px 20px rgba(255, 204, 0, 0.5);
+    transform: scale(1.03);
+    background: linear-gradient(145deg, #1a1a1a, #222222);
+}
+
+@media (max-width: 768px) {
+    .outer {
+        width: 90%;
+        min-height: auto; /* Flexible height for mobile */
+        padding-bottom: 20px;
+    }
+
+    .img {
+        height: 300px; /* Reduced height for mobile */
+        width: 90%; /* Added margin around image */
+        margin: 0 auto;
+    }
+
+    .btn {
+        width: 90%;
+        font-size: 16px; /* Smaller text for mobile */
+    }
+
+    .head {
+        font-size: 24px; /* Adjusted heading size */
+        margin: 15px 0;
+    }
+}
